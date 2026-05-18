@@ -1,0 +1,160 @@
+/* ============================================================
+   work.css  —  Styles for work.html
+   ============================================================ */
+
+/* ─── Page background ─── */
+.work-page {
+  background: var(--white);
+}
+
+/* ─── Experience block ─── */
+.experience-block {
+  background: var(--lavender);
+  border-radius: 16px;
+  padding: 2rem 2.4rem;
+  margin-bottom: 2.5rem;
+  border-left: 4px solid var(--pink);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-block::before {
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 182, 193, 0.25);
+}
+
+.exp-role {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.exp-company {
+  font-size: 0.88rem;
+  color: var(--pink-dark);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.exp-desc {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.75;
+}
+
+/* ─── Projects heading override ─── */
+.projects-label  { margin-top: 3rem; }
+.projects-heading {
+  font-size: 1.8rem !important;
+  margin-bottom: 0.4rem !important;
+}
+
+/* ─── Projects grid ─── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.8rem;
+  margin-top: 1rem;
+}
+
+/* ─── Project card ─── */
+.project-card {
+  background: var(--white);
+  border: 1.5px solid var(--lavender);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(230,230,250,0.3), rgba(255,182,193,0.15));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--pink);
+}
+
+.project-card:hover::after { opacity: 1; }
+
+/* ─── Project card image ─── */
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.project-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--lavender-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.project-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--black);
+  position: relative;
+  z-index: 1;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--grey-mid);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Tech tags ─── */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.tag {
+  background: var(--pink);
+  color: var(--black);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.tag.lavender {
+  background: var(--lavender);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}

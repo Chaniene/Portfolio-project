@@ -1,0 +1,151 @@
+/* ============================================================
+   contact.css  —  Styles for contact.html
+   ============================================================ */
+
+/* ─── Page background ─── */
+.contact-page {
+  background: var(--white);
+}
+
+/* ─── Contact hero banner ─── */
+.contact-hero {
+  background: linear-gradient(135deg, var(--lavender), var(--pink));
+  border-radius: 24px;
+  padding: 3.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  top: -80px; right: -60px;
+  pointer-events: none;
+}
+
+.contact-hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-hero p {
+  font-size: 0.95rem;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Contact cards grid ─── */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-card {
+  background: var(--lavender);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  transition: all 0.25s ease;
+  border: 1.5px solid transparent;
+}
+
+.contact-card:hover {
+  border-color: var(--pink);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(255, 182, 193, 0.2);
+}
+
+/* ─── Contact icon box ─── */
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.contact-type {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pink-dark);
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.contact-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--black);
+  word-break: break-all;
+}
+
+/* ─── Optional contact form ─── */
+.contact-form {
+  margin-top: 3rem;
+  background: var(--lavender);
+  border-radius: 20px;
+  padding: 2.5rem;
+}
+
+.contact-form h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--pink-dark);
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--lavender-dark);
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  background: var(--white);
+  color: var(--black);
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--pink);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}

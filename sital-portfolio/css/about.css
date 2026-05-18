@@ -1,0 +1,156 @@
+/* ============================================================
+   about.css  —  Styles for about.html
+   ============================================================ */
+
+/* ─── Page background ─── */
+.about-page {
+  background: linear-gradient(180deg, var(--white) 0%, var(--lavender) 100%);
+}
+
+/* ─── Profile image ─── */
+.about-profile-img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--pink);
+  margin: 0 auto 2rem;
+}
+
+/* ─── Info grid ─── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.info-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.8rem;
+  border: 1.5px solid var(--lavender-dark);
+}
+
+/* Full-width card (spans both columns) */
+.info-card--full {
+  grid-column: 1 / -1;
+}
+
+.info-card-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pink-dark);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.info-card-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.info-card-value.small {
+  font-size: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ─── Education block ─── */
+.education-block {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem 2.4rem;
+  margin-bottom: 2.5rem;
+  border: 1.5px solid var(--lavender-dark);
+}
+
+.edu-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: var(--black);
+}
+
+.edu-list {
+  list-style: none;
+}
+
+.edu-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--lavender);
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.edu-list li:last-child { border-bottom: none; }
+
+.edu-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--pink);
+  flex-shrink: 0;
+}
+
+/* ─── Interests heading override ─── */
+.interests-heading {
+  font-size: 1.8rem !important;
+  margin-bottom: 0.4rem !important;
+}
+
+/* ─── Interests grid ─── */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.interest-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.8rem;
+  text-align: center;
+  border: 1.5px solid var(--lavender-dark);
+  transition: all 0.25s ease;
+}
+
+.interest-card:hover {
+  border-color: var(--pink);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(255, 182, 193, 0.25);
+}
+
+.interest-icon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.interest-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.interest-desc {
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.55;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+  .about-grid      { grid-template-columns: 1fr; }
+  .interests-grid  { grid-template-columns: 1fr; }
+}
